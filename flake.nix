@@ -56,6 +56,8 @@
             hooks = {
               nixpkgs-fmt.enable = true;
               markdownlint.enable = true;
+              commitizen.enable = true;
+              typos.enable = true;
             };
           };
         };
