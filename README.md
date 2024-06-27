@@ -2,6 +2,25 @@
 
 This is a Nix flake for the [Pipedream CLI](https://pipedream.com/docs/cli/install).
 
+## Usage
+
+### With flakes
+
+```nix
+inputs.pipedream-cli.url = "github:planet-a-ventures/pipedream-cli";
+```
+
+and then
+
+```nix
+buildInputs = [
+    inputs.pipedream-cli.packages.${system}.default
+];
+```
+
+> If anyone wanted to contribute a `flakeModule`
+> via [flake-parts](https://flake.parts/) that would be highly appreciated.
+
 ## Development
 
 ### Update the hashes
